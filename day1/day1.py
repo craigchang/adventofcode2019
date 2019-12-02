@@ -6,9 +6,8 @@ def readFile():
     file.close()
     return massList
 
-
 def calculateFuel(mass):
-    return math.floor(mass / 3) - 2
+    return math.floor(mass / 3) - 2    
 
 def part1(massList):
     return sum([calculateFuel(mass) for mass in massList])
@@ -16,18 +15,17 @@ def part1(massList):
 def part2 (massList):
     sumFuel = 0
     for mass in massList:
-        sumFeulForMass = 0
+        sumFuelForMass = 0
         while True:
             remainingFuel = calculateFuel(mass)
             if (remainingFuel <= 0):
                 break
-            sumFeulForMass += remainingFuel
+            sumFuelForMass += remainingFuel
             mass = remainingFuel
-        sumFuel += sumFeulForMass
+        sumFuel += sumFuelForMass
 
     return sumFuel
 
 massList = readFile()
 print(part1(massList))
 print(part2(massList))
-
