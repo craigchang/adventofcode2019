@@ -38,7 +38,7 @@ def drawLinePath(line1path, grid, isLine1 = False):
                 y -= 1
 
             if (x, y) not in grid:
-                grid[(x, y)] = "*"
+                grid[(x, y)] = "*" if isLine1 else "#"
             elif (grid[(x, y)] == "*" and not isLine1):
                 grid[(x, y)] = "X"
 
