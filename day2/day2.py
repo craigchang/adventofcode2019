@@ -2,6 +2,7 @@ def readFile():
     file = open("day2/input.txt", "r")
     intCode = [int(x) for x in file.readline().split(",")]
     print(intCode)
+    file.close()
     return intCode
 
 def calculateOutput(instructionPtr, intCode):
