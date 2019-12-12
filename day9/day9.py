@@ -122,5 +122,3 @@ def main():
     print(output[len(output)-1])
 
 main()
-
-# 203 is wrong
